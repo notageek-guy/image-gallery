@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
-import { useAuth } from "@/context/Auth";
+import { UseAuth } from "@/context/Auth";
 import { useEffect } from "react";
 interface childProps {
   children?: React.ReactNode | React.ReactNode[] | JSX.Element;
 }
 
 const ProtectedRoute: React.FC<childProps> = ({ children }) => {
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const router = useRouter();
   if (typeof window === "undefined") return null;
     if (currentUser) {

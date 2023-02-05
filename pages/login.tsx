@@ -1,15 +1,15 @@
 import styles from "@/styles/login.module.css";
 import { useRouter } from "next/router";
-import { useAuth } from "@/context/Auth";
+import { UseAuth } from "@/context/Auth";
 import Link from "next/link";
-import useInput from "@/hooks/useInput";
-import useSignIn from "@/hooks/useSign";
+import UseInput from "@/hooks/useInput";
+import UseSignIn from "@/hooks/useSign";
 import { useCallback } from "react";
 export default function login() {
-  const { formData, handleChange } = useInput();
-  const { currentUser } = useAuth();
+  const { formData, handleChange } = UseInput();
+  const { currentUser } = UseAuth();
   const Router = useRouter();
-  const { signIn } = useSignIn();
+  const { signIn } = UseSignIn();
   const handleForm = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();

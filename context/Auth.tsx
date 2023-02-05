@@ -71,7 +71,7 @@ const AuthProvider: FC<{
     </AuthContext.Provider>
   );
 };
-export const useAuth = () => {
+export const UseAuth = () => {
   return useContext(AuthContext);
 };
 export default AuthProvider;

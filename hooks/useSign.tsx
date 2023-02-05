@@ -5,7 +5,7 @@ import {
   signOut,
   signInWithPopup,
 } from "firebase/auth";
-export default function useSignIn() {
+export default function UseSignIn() {
   const signIn = async (email: string, password: string) => {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);

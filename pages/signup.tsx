@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
-import { useAuth } from "@/context/Auth";
 import styles from "@/styles/login.module.css";
+import { UseAuth } from "@/context/Auth";
 import Link from "next/link";
-import useInput from "@/hooks/useInput";
-import useSignIn from "@/hooks/useSign";
+import UseInput from "@/hooks/useInput";
+import UseSignIn from "@/hooks/useSign";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
 export default function signup() {
   const Router = useRouter();
-  const { currentUser } = useAuth();
+  const { currentUser } = UseAuth();
   const notify = () => toast.success("Account created successfully");
-  const { formData, handleChange } = useInput();
-  const { signUp } = useSignIn();
+  const { formData, handleChange } = UseInput();
+  const { signUp } = UseSignIn();
   const handleForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
